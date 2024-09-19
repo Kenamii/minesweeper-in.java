@@ -1,2 +1,3 @@
 # minesweeper-in.java
-creating a minesweeper game while learning the java language at the same time
+This repository holds the code for my attempt on creating a minesweeper game.
+**This project is mainly for me to learn the java language**
