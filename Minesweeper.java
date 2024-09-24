@@ -22,6 +22,32 @@ public class Minesweeper{
 	
 	// method for changing the revealed matrix
 	public void fixRevealed(int x, int y){
+		minefieldRevealed[x][y] = -2
+		if (x != 0){
+		    minefieldRevealed[x-1][y] = minefieldConcealed[x-1][y];
+            if(minefieldRevealed[x-1][y]==0){
+				minefieldRevealed[x-1][y] = -2;
+			}
+            if(y !=0 ) {
+                minefieldRevealed[x-1][y-1] = minefieldConcealed[x-1][y-1];
+                if(minefieldRevealed[x-1][y-1]==0){
+					minefieldRevealed[x-1][y-1]=-2;
+				}
+            }
+        }
+		if  (x != 9){
+			minefieldRevealed[x+1][y] = minefieldConcealed[x+1][y];
+			if(minefieldRevealed[x+1][y]==0){
+				minefieldRevealed[x+1][y] = -2;
+			}
+			if(y != 9){
+				minefieldRevealed[x+1][y+1] = minefieldConcealed[x+1][y+1]
+				if(minefieldRevealed[x+1][y+1]==0){
+					minefield[x+1][y+1]=-2;
+				}
+			}
+		}
+		// add the other sections
 	}
 	
 	// method for player input
