@@ -94,7 +94,7 @@ public class Minesweeper{
             if(minefieldRevealed[x][y+1] == 0){
                 minefieldRevealed[x][y+1] = -2;
             }
-            if (y != 0){
+            if (x != 0){
                 minefieldRevealed[x-1][y+1] = minefieldConcealed[x-1][y+1];
                 if(minefieldRevealed[x-1][y+1]==0){
                     minefieldRevealed[x-1][y+1] = -2;
