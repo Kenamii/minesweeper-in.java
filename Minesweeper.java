@@ -6,6 +6,8 @@ public class Minesweeper{
     uses 2d arrays, revealed contains player's progress, concealed contains the mines
     bombs have a value of -1
     blank squares have a value of -2
+    possibly has more bugs, haven't tested enough
+    dm @eyuil. on discord to notify of any bugs found when running this program
     */
     private int[][] minefieldRevealed = new int[10][10];
     private int[][] minefieldConcealed = new int[10][10];
