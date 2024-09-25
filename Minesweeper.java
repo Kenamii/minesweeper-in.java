@@ -39,7 +39,7 @@ public class Minesweeper{
         for(int x=0; x<10; x++){
             for(int y=0; y<10; y++){
                 if (minefieldRevealed[x][y]==0){
-                    if (minefieldConcealed[x][y]!=100){
+                    if (minefieldConcealed[x][y]!=-1){
                         return false;
                     }
                 }
@@ -331,12 +331,15 @@ public class Minesweeper{
             int x = random.nextInt(10);
             int y = random.nextInt(10);
             
-            //shows the coordinates for the mines (delete later)
-            System.out.println("x: " + x + " y: " + y);
             
-            //mines will have a value -1 at given coordinates
-            minefieldConcealed[x][y] = -1;
-            mines++;
+            
+			//prevents mines from being placed in the same location
+			if (minefieldConcealed[x][y] != -1){
+				
+					//mines will have a value -1 at given coordinates
+				minefieldConcealed[x][y] = -1;
+				mines++;
+			}
         }
         createConcealed();
     }
